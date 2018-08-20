@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Audio</title>
     <style>
-    
+        #video{
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -79,19 +81,30 @@
             loop
             autoplay
         -->
-<<<<<<< HEAD
          <audio src="audio.mp3" controls></audio>
     </section>
     <section>
-        <h2></h2>
+        <h2>Video</h2>
+        <!--
+            Atributos:
+
+            controls    (boolean)
+            autoplay    (boolean)
+            loop        (boolean)
+            muted       (boolean)
+            poster      (string)
+
+        -->
+        <video src="video.mp4" 
+            id="video"
+            controls
+            poster="poster.png"
+           
+            autoplay
+            loop
+            >
+        </video>
     </section>
-=======
-         <audio src="audio.mp3" controls>Por favor actualiza tu navegador para escuchar
-             este sorprendente audio
-         </audio>
-    </section>
-   
->>>>>>> origin/master
     
 </body>
 </html> 
