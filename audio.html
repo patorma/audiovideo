@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Audio</title>
     <style>
+        body{
+            text-align: center;
+        }
         #video{
             max-width: 100%;
+            margin-bottom: .5em;/*se agrega espacio entre los botones y el video*/
         }
     </style>
 </head>
@@ -95,16 +99,25 @@
             poster      (string)
 
         -->
-        <video src="video.mp4" 
-            id="video"
-            controls
-            poster="poster.png"
-           
-            autoplay
-            loop
-            >
-        </video>
+        <video src="video.mp4" id="video"></video>
+        <button onclick="reproducir()">Play</button>
+        <button onclick="pausar()">Pause</button>
     </section>
-    
+    <script>
+        //se captura el documento
+     var v = document.getElementById('video');
+     v.controls = false;
+     v.autoplay = false;
+     v.poster = "poster.png"; 
+     function reproducir(){
+         v.play();
+     }
+     function pausar(){
+         v.pause();
+     }
+     //API conjunto de propiedades y metodos que comparte un lenguaje o una aplicacion con otros
+     //API -> Aplication Programing Interface
+    </script>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2HHOSS_Chcg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 </html> 
